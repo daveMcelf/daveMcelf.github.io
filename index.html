@@ -6,7 +6,10 @@
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		
+		  var downloadLink = document.getElementById('button');
+			addListener(downloadLink, 'click', function() {
+			  ga('send', 'event', 'button', 'click', 'nav-buttons');
+			});
 		  ga('create', 'UA-65601158-1', 'auto');
 		  ga('send', 'pageview');
 		
@@ -14,20 +17,8 @@
 		<title>Hank Quinlan, Horrible Cop</title>
 	</head>
 	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
+		<button id="button">Please click</button>
+		
 		<footer>
     		<ul>
         		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
